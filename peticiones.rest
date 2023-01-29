@@ -1,0 +1,73 @@
+@hostname = http://localhost @port = 3000 @url = {{hostname}}:{{port}}
+
+---------------------------------- CLIENTES -------------------------------
+
+### GET {{url}}/api/clients
+
+--Recupera un solo cliente ### GET {{url}}/api/clients/12
+
+--Crea un nuevo cliente ### POST {{url}}/api/clients Content-Type: application/json
+
+{
+"nombre": "Camila", "apellidos": "Dama", "direccion": "Villa Rodriga", "telefono": "63547839", "email": "Camila@mail.com", "dni": "6912396E"
+}
+
+-- actualiza cliente
+
+### PUT {{url}}/api/clients/2 Content-Type: application/json
+
+{
+"nombre": "Mirko", "apellidos": "Marley", "direccion": "Carlen", "telefono": "635938273", "email": "mirko@mail.com", "dni": "526093748t"
+}
+
+-- Elimina un cliente
+
+### DELETE http://localhost:3000/api/clients/12
+
+---------------------------------- VIAJES -------------------------------- -- Recupera todos los viajes ### GET {{url}}/api/travels
+
+-- Recupera 1 solo viaje segun id ### GET {{url}}/api/travels/1
+
+--Crea un nuevo viaje ### POST {{url}}/api/travels Content-Type: application/json
+
+{
+"fecha_salida": "03-05-2023", "fecha_vuelta": "14-05-2023", "idVueloIda": "AA4031", "idVueloVuelta": "AA4032", "hotelId": "6",
+}
+
+-- actualiza viaje
+
+### PUT {{url}}/api/travels/2 Content-Type: application/json
+
+{
+"fecha_salida": "03-05-2023", "fecha_vuelta": "14-05-2023", "idVueloIda": "AB3031", "idVueloVuelta": "AB3032", "hotelId": "6",
+}
+
+-- Elimina un viaje
+
+### DELETE http://localhost:3000/api/travels/2
+
+---------------------- HOTELES -------------------------------------------- -- Recupera todos los hoteles
+
+### GET {{url}}/api/hotels
+
+-- Recupera 1 solo hotel segun id
+
+### GET {{url}}/api/hotels/1
+
+-- actualiza hotel
+
+### PUT {{url}}/api/hotels/2 Content-Type: application/json
+
+{
+"nombre": "Riu Palace", "direccion": "Cancun 32030", "ciudad": "Real", "descripcion": "Excelente hotel para vivir aventuras unicas", "tarifa": "400"
+}
+
+-- Elimina un hotel
+
+### DELETE http://localhost:3000/api/hotels/12
+
+###
+
+----------------------- RESERVAS ------------------------------
+
+### POST {{url}}/api/1/1
